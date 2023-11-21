@@ -1,21 +1,23 @@
-name: Hello World
+name: Sample Pipeline
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Hello World
+    - name: Hello world
       run: echo "Hello, World!"
 
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Print test
+    - name: Testt
       run: echo "Test"
+
+
