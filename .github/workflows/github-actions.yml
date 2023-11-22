@@ -7,10 +7,16 @@ jobs:
   checkmarx:
     runs-on: ubuntu-latest
     steps:
-      - uses: docker://alpine:latest
-      - run: |
-          echo "checkmarx"
-          cat cat /etc/os-release
+      - run: cat cat /etc/os-release
+
+  docker_image:
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:latest
+    steps:
+         - name: Log the node version
+           run: |
+             cat /etc/os-release
 
   sonarqube:
     runs-on: ubuntu-latest
