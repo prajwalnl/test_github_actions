@@ -7,6 +7,6 @@ on:
 
 jobs:
   checkmarx:
-    runs-on: alpine:latest
+    runs-on: alpine-latest
     steps:
       - run: echo "This job will be run first."
